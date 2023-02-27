@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task 3</title>
+    <style>
+        h1{
+            color: teal;
+            text-align: center;
+        }
+        p{
+            color:sienna;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>The age in months</h1>
+    <p id="a1"></p>
+    <script>
+        let array1=[{name:"haris",age:23},
+        {name:"saif",age:24},
+        {name:"hamza",age:25},
+        {name:"bilal",age:26},
+        {name:"noman",age:27}]; 
+        let array2=array1.map(thefunction);
+        function thefunction(value)
+        {
+            return value.name + value.age*12 +" Months<br>";
+        }
+        document.getElementById("a1").innerHTML=array2;
+    </script>
+</body>
+</html>

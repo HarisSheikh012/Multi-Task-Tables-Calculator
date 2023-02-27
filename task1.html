@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task</title>
+    <style>
+        p{
+            color:firebrick;
+            text-align: center;
+        }
+        h2{
+            color: darkslategrey;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    Enter Number : <input type="number" id="a2">
+    <button type="button" onclick="myfunction()">Click</button>
+    <h2>Following Table</h2>
+    <p id="a1"></p>
+    <script>
+        function myfunction()
+        {
+            let number,i;
+            number=document.getElementById("a2").value;
+            let text="";
+            for (i=1;i<=10;i++)
+            {
+             text+=number+"*"+i+"="+(number*i)+"<br>";
+             document.getElementById("a1").innerHTML=text;
+            }
+        }
+    </script>
+</body>
+</html>

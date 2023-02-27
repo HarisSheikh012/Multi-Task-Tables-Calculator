@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javascript Task 2</title>
+    <style>
+        h1{
+            color: maroon;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+            color: gray;
+        }
+        button{
+            display: flex;
+            margin: auto;
+            margin-top: 1%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Find max & min in Array</h1>
+    <p>The following array elements are... </p>
+    <p>25,23,89,7,12</p>
+    <p id="a1"></p>
+    <p id="a2"></p>
+    <script>
+        let array;
+        array=[25,23,89,7,12];
+        let max,min,i,j;
+        max=min=array[0];
+        for(i=0;i<5;i++)
+        {
+           if(array[i]>max)
+           {
+               max=array[i];
+           }
+           document.getElementById("a1").innerHTML="The maximum number is "+max;
+        }
+        for(j=0;j<5;j++)
+        {
+            if(array[j]<min)
+            {
+                min=array[j];
+            }
+            document.getElementById("a2").innerHTML="The  minimun number is "+min;
+        }
+    </script>
+    <h1>Find max & min in three Input fields</h1>
+    <form style="text-align: center">
+    Enter Number : <input type="number" id="a3"><br>
+    Enter Number : <input type="number" id="a4"><br>
+    Enter Number : <input type="number" id="a5"><br>
+    </form>
+    <button type="button" onclick="thefunction()">Get Maximum</button>
+    <p id="a6"></p>
+    <p id="a7"></p>
+    <p id="a8"></p>
+    <script>
+        function thefunction()
+        {
+            let a,b,c,max,min,mid;
+            a=document.getElementById("a3").value;
+            b=document.getElementById("a4").value;
+            c=document.getElementById("a5").value;
+            if (a>b && a>c)
+            {
+                max=a;
+            }
+            else if (b>c && b>a)
+            {
+               max=b; 
+            }
+            else if(c>a && c>b)
+            {
+               max=c; 
+            }
+            document.getElementById("a6").innerHTML="The maximum number is "+max;
+            if (a<b && a<c)
+            {
+                min=a;
+            }
+            else if (b<a && b<c)
+            {
+                min=b;
+            }
+            else if(c<a && c<b)
+            {
+                min=c;
+            }
+            document.getElementById("a7").innerHTML="The minimum number is "+min;
+            if(a>b && a<c)
+            {
+                mid=a;
+            }
+            else if(a<b && a>c)
+            {
+                mid=a;
+            }
+            else if(b>a && b<c)
+            {
+                mid=b;
+            }
+            else if(b<a && b>c)
+            {
+                mid=b;
+            }
+            else if(c>a && c<b)
+            {
+                mid=c;
+            }
+            else if(c<a && c>b)
+            {
+                mid=c;
+            }
+            document.getElementById("a8").innerHTML="The middle number is "+mid;
+        }
+    </script>
+</body>
+</html>
